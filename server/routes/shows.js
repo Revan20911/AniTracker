@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Anime = require('../models/animelist');
+const Anime = require('../models/showModel');
 router.get('/', (req, res, next) => {
   // get placeholder
 Anime.find({}, 'anime')

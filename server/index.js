@@ -4,6 +4,7 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 5000;
 
+
 mongoose.connect(process.env.DB, {useNewUrlParser: true})
 .then(() => console.log("Successfully connected to database"))
 .catch((err) => console.log(err));
