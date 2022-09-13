@@ -1,5 +1,9 @@
 {
   "dependencies": {
     "dotenv": "^16.0.2"
+  },
+  "devDependencies": {
+    "concurrently": "^7.4.0",
+    "nodemon": "^2.0.19"
   }
 }
