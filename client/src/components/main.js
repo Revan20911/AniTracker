@@ -1,13 +1,19 @@
 import React, {useEffect, useState} from "react";
+import SubmitButton from "./utils/button";
 import "../styles/main.css";
 
 const Show = (props) => {
     return(
         <div className="show-container">
             <h3>{props.show.title}</h3>
-            <h4>{props.show.genre}</h4>
             <img src={props.show.cover}/>
+            <h4>{props.show.genre}</h4>
             <p>{props.show.desc}</p>
+            <div className="button-row">
+                <SubmitButton className="edit" text="Edit"/>
+                <SubmitButton className="delete" text="Delete" 
+                onClick={() => props.delShow(props.show._id)}/>
+            </div>
         </div>
     ); 
 }
@@ -28,7 +34,7 @@ export default function ShowList() {
             setShows(shows);   
         }
         getShows();
-        console.log(shows);
+        
 
     }, [shows.length]);
 
@@ -36,6 +42,9 @@ export default function ShowList() {
         await fetch(`http://localhost:5000/${id}`, {
             method: 'DELETE'
         });
+
+        const newShows = shows.filter((el) => el._id !== id);
+        setShows(newShows);
     }
 
     function ShowsList(){
@@ -43,6 +52,8 @@ export default function ShowList() {
             return(
                 <Show
                 show={show}
+                delShow={() => delShow(show._id)}
+                key={show._id}
                 />
             )
         })

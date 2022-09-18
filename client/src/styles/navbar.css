@@ -11,14 +11,18 @@
 }
 
 .navigation-bar{
+   
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     width: 100%;
     padding: 0.25rem;
     height: 5rem;
     align-items: center;
     background-color: var(--prim-dark);
     color: var(--prim-light);
+    box-shadow: 2px 2px 2px black;
+    
 }
 
 
@@ -27,6 +31,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: fit-content;
 }
 
 .nav-button{
@@ -41,20 +46,54 @@
     margin: 10px;
 }
 
+.nav-button:hover{
+    background-color: var(--prim-light);
+    border: 1px solid var(--prim-dark);
+    color: var(--prim-dark);
+}
+
+.nav-button-login{
+
+    width: fit-content;
+    padding: 10px 20px;
+    color: var(--prim-dark);
+    text-decoration: none;
+    font-size: 1.5rem;
+    border: 1px solid var(--prim-dark);
+    border-radius: 0.5rem;
+    margin: 10px;
+    background-color: var(--prim-light);
+
+}
+
+.nav-button-login:hover{
+
+    color: var(--prim-light);
+    text-decoration: none;
+    font-size: 1.5rem;
+    border: 1px solid var(--prim-light);
+    background-color: var(--prim-dark);
+
+}
+
+
 .logo{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 10px;
-    width:fit-content;
-    
+    z-index: 1;
+    background-color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+     
 }
 
 .logo h1, .logo p{
     padding: 0px;
-    margin: 0;
+    margin: 0px;
     color: var(--prim-dark);
     cursor: pointer;
+    width:fit-content;
     
 }
 

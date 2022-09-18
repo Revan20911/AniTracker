@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import "../styles/add.css";
 import uniqid from "uniqid";
+import SubmitButton from "./utils/button";
 
 
 export default function AddShow(){
@@ -11,10 +12,14 @@ export default function AddShow(){
         genre: "",
         desc: "",
         cover: "",
+        currentlyAiring: "",
+        episodes: "",
+        completed: "",
+        rating: "",
+
     });
 
     const navigate = useNavigate();
-
     function updateShow(value){
         return setShow((prev) => {
             return {...prev, ...value};
@@ -37,17 +42,16 @@ export default function AddShow(){
             return;
         });
         console.log(newShow);
-
         setShow({title: "", genre:"", desc: "", cover: ""});
-        
         navigate("/shows");
     }
 
     return(
-        <div>
+        <div className="input-form-wrapper">
             <form onSubmit={onSubmit}>
             <div className="entry-container">
             <h3>Add Show</h3>
+                <label target="Title">Title</label>
                 <input 
                 type="text"
                 className="input-form"
@@ -55,6 +59,7 @@ export default function AddShow(){
                 value={show.title}
                 onChange={(e) => updateShow({title: e.target.value})}
                 />
+                <label target="Genre">Genre</label>
                 <input 
                 type="text"
                 className="input-form"
@@ -62,13 +67,15 @@ export default function AddShow(){
                 value={show.genre}
                 onChange={(e) => updateShow({genre: e.target.value})}
                 />
-                <input 
+                <label target="desc">Description</label>
+                <textarea
                 type="text"
                 className="input-form"
                 id="desc"
                 value={show.desc}
                 onChange={(e) => updateShow({desc: e.target.value})}
                 />
+                <label target="Cover">Cover Image URL</label>
                 <input 
                 type="text"
                 className="input-form"
@@ -76,7 +83,7 @@ export default function AddShow(){
                 value={show.cover}
                 onChange={(e) => updateShow({cover: e.target.value})}
                 />
-                <input type="submit"/>
+                <SubmitButton type="submit" className={"edit"} text="Submit"/>
             </div>
             </form>
         </div>
