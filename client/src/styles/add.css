@@ -1,0 +1,19 @@
+*,
+*before,
+*after{
+    box-sizing: border-box;
+}
+
+:root{
+
+    --prim-dark:#0a47a8;
+    --prim-light:#e1e3e6;
+}
+
+.entry-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+}
+
