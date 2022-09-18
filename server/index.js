@@ -1,5 +1,4 @@
 const express = require('express');
-const { default: mongoose, Collection } = require('mongoose');
 require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 5000;
@@ -27,6 +26,8 @@ const dbo = require("./db/connection");
 //     console.log(show.title);
 //   });
 // });
+
+
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
