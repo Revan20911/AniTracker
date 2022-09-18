@@ -47,4 +47,13 @@ showRoutes.route("/shows/add").post( function (req, response){
   });
 });
 
+showRoutes.route("/:id").delete((req, response) =>{
+  let db_connect = dbo.getDb();
+  let myquery = {_id: ObjectId(req.params.id)};
+  db_connect.collection("showlist").deleteOne(myquery, function (err, obj){
+    if (err) throw err;
+    response.json(obj);
+  });
+});
+
 module.exports = showRoutes;
