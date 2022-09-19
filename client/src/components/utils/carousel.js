@@ -8,7 +8,7 @@ function ShowTrailers(){
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1
     };
 
@@ -48,7 +48,7 @@ function ShowUpcoming(){
 
     const settings ={
         dots: true,
-        infinite: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 5,
         slidesToScroll: 1
@@ -70,7 +70,6 @@ function ShowUpcoming(){
         }
         getUpcomingShows();
     }, [upcomingShows.length])
-
 
     function DisplayUpcomingShows(){
         return <Slider {...settings}>

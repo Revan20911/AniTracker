@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/home.css"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {ShowTrailers, ShowUpcoming} from "./utils/carousel";
+import {ShowTrailers, ShowUpcoming} from "../utils/carousel";
 
 export default class Home extends React.Component{
 render(){
@@ -17,6 +17,18 @@ render(){
                 <div className="trailer-carousel">
                     <h3>Popular Anime Trailers</h3>
                     <ShowTrailers/>
+                </div>
+                <div className="sub-content-wrap">
+                    
+                    <div className="sub-content">
+                    <h3>Top Upcoming</h3>
+
+                    </div>
+                    
+                    <div className="sub-content">
+                    <h3>Top Rated</h3>
+
+                    </div>
                 </div>
             </div>
         </div>

@@ -15,7 +15,7 @@
 .home-wrapper{
     display: block;
     width: 100rem;
-    height: calc(100vmax - 5vmax);
+    height: 100%;
     margin:0 auto;
     background-color: var(--prim-light);
     margin-top: 10px;
@@ -58,17 +58,20 @@
 
 .seasonal-carousel img{
 
+    opacity: 0;
     max-width: 12rem;
     height: 18rem;
     box-shadow: 1px 1px 2px black;
+    animation: fade-in 0.3s ease-in-out forwards;
     
 }
 
 .trailer-carousel iframe{
-
+    opacity: 0;
     max-width: 20rem;
     max-height: 20rem;
     box-shadow: 1px 1px 2px black;
+    animation: fade-in 0.3s 0.3s ease-in-out forwards;
 
 }
 
@@ -81,11 +84,37 @@
 
 }
 
-.carousel-item{
+.sub-content-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    
+}
 
-    height: 18rem;
-    width: 9rem;
+.sub-content-wrap h3{
+    text-align: center;
+    width: 99%;
+    background-color: var(--prim-dark);
+    color: var(--prim-light);
+    font-size: 2rem;
+    margin: 0;
+}
+
+.sub-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60rem;
+    width: 45rem;
+    margin: 1rem auto;
+    border: 1px solid black;
+}
 
 
+
+@keyframes fade-in{
+    from {opacity: 0;}
+    to   {opacity: 1;}
 }
 

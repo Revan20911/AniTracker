@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import SubmitButton from "./utils/button";
+import SubmitButton from "../utils/button";
 import "../styles/main.css";
 
 const Show = (props) => {
@@ -17,7 +17,6 @@ const Show = (props) => {
         </div>
     ); 
 }
-
 export default function ShowList() {
     const [shows, setShows] = useState([]);
 
@@ -58,7 +57,6 @@ export default function ShowList() {
             )
         })
     }
-
     return(
         <div className="content-wrapper">
             <div className="show-list">

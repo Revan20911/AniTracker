@@ -1,21 +1,20 @@
 import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import "../styles/add.css";
-import uniqid from "uniqid";
-import SubmitButton from "./utils/button";
+
+import SubmitButton from "../utils/button";
 
 
 export default function AddShow(){
     const [show, setShow] = useState({
-        id: uniqid(),
         title: "",
         genre: "",
         desc: "",
         cover: "",
-        currentlyAiring: "",
-        episodes: "",
-        completed: "",
-        rating: "",
+        // currentlyAiring: "",
+        // episodes: "",
+        // completed: "",
+        // rating: "",
 
     });
 

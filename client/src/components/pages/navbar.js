@@ -18,6 +18,9 @@ export default function Navbar(){
                     </NavLink>
                 </div>
                 <div className="button-row">
+                    <NavLink className="nav-button-login" to="/register">
+                        Register
+                    </NavLink>
                     <NavLink className="nav-button-login" to="/login">
                         Login
                     </NavLink>
