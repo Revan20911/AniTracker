@@ -8,7 +8,7 @@ const animeShow = new Schema({
         cover: String,
 });
 
-const Show = mongoose.model('Show', animeShow, "showlist");
+const Show = mongoose.model('Show', animeShow, process.env.DB_SHOWS);
 
 module.exports = Show;
 

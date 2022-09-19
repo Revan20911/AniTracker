@@ -6,6 +6,6 @@ const trailers = new Schema({
     src: String, 
 });
 
-const Trailer = mongoose.model("Trailer", trailers, "trailers");
+const Trailer = mongoose.model("Trailer", trailers, process.env.DB_TRAILERS);
 
 module.exports = Trailer;

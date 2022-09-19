@@ -6,6 +6,6 @@ const UpcomingSchema = new Schema({
     src: String
 });
 
-const Upcoming = mongoose.model("Upcoming", UpcomingSchema, "upcoming");
+const Upcoming = mongoose.model("Upcoming", UpcomingSchema, process.env.DB_UPCOMING);
 
 module.exports = Upcoming;
