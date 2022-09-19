@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState} from "react";
+import { NavLink } from "react-router-dom";
 
 export default function TopUpcoming(){
     const [topUpcoming, setTopUpcoming] = useState([]);
@@ -20,14 +21,16 @@ export default function TopUpcoming(){
 
     function DisplayTopUpcoming(){
         return topUpcoming.map((upcoming) => {
-            return <div className="upcoming-cell">
+            return <NavLink
+            key={upcoming._id}
+            className="upcoming-cell"
+            to={'/series/' + upcoming._id + "/" + upcoming.title}>
                 <h3>{upcoming.title}</h3>
                 <p>{upcoming.desc}</p>
                 <img src={upcoming.src}/>
-            </div>
+            </NavLink>
         })
     }
-
     return(
         <div>
             {DisplayTopUpcoming()}

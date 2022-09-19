@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 
 function ShowTrailers(){
@@ -71,11 +72,14 @@ function ShowUpcoming(){
         getUpcomingShows();
     }, [upcomingShows.length])
 
+   
+
     function DisplayUpcomingShows(){
         return <Slider {...settings}>
               {upcomingShows.map((upcoming) => {
             return <img src={upcoming.src}
-            key={upcoming._id}/>
+            key={upcoming._id}>
+            </img>
     })} </Slider>
 }
 
