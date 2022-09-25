@@ -22,7 +22,7 @@ mongoose.connect(process.env.DB, {
 mongoose.Promise = global.Promise;
 
 const path = require("path");
-const { response } = require('express');
+
 
 app.use(express.static(path.resolve(__dirname, "./client/build")));
 
