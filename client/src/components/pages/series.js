@@ -22,7 +22,7 @@ export default function Series(){
             <h1>{info.title}</h1>
             <div className="series-sub-content-wrapper">
                 <div className="series-sub-content">
-                    <img src={info.img}/>
+                    <img src={info.img} alt="Series_cover"/>
                     <h4>Information</h4>
                     <div className="series-information">
                         <div className="item-info">Episodes:  
