@@ -3,7 +3,7 @@ import "../styles/series.css"
 import { useParams } from "react-router-dom";
 
 export default function Series(){
-    const {title} = useParams();
+    const {id} = useParams();
 
     const [info, setInfo] = React.useState([]);
 
