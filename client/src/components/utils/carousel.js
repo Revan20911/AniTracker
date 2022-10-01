@@ -14,7 +14,7 @@ function ShowTrailers(){
 
     useEffect(() => {
         async function getTrailers(){
-           const response = await fetch("http://localhost:5000/items");
+           const response = await fetch("https://anime----tracker.herokuapp.com/items");
 
            if(!response.ok){
             const message = `An error occurred: ${response.statusText}`;
@@ -56,7 +56,7 @@ function ShowUpcoming(){
 
     useEffect(() => {
         async function getUpcomingShows(){
-           const response = await fetch("http://localhost:5000/upcoming");
+           const response = await fetch("https://anime----tracker.herokuapp.com/upcoming");
 
            if(!response.ok){
             const message = `An error occurred: ${response.statusText}`;
