@@ -20,13 +20,19 @@ render(){
                     <ShowTrailers/>
                 </div>
                 <div className="sub-content-wrap">
-                    <div className="sub-content">
+                    <div className="container">
                     <h3>Top Upcoming</h3>
+                    <div className="sub-content">
+                    
                     <TopUpcoming/>
                     </div>
-                    <div className="sub-content">
+                    </div>
+                    <div className="container">
                     <h3>Top Rated</h3>
+                    <div className="sub-content">
+                    
 
+                    </div>
                     </div>
                 </div>
             </div>
