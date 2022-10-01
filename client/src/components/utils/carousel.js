@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 
 function ShowTrailers(){
@@ -32,7 +31,7 @@ function ShowTrailers(){
     function DisplayTrailers(){
         return <Slider {...settings}>
               {trailers.map((trailer) => {
-            return <iframe width="200px" height="200px" src={trailer.src}
+            return <iframe title={trailer._id} width="200px" height="200px" src={trailer.src}
             key={trailer._id}/>
     })} </Slider>
 }
@@ -77,7 +76,7 @@ function ShowUpcoming(){
     function DisplayUpcomingShows(){
         return <Slider {...settings}>
               {upcomingShows.map((upcoming) => {
-            return <img src={upcoming.src}
+            return <img src={upcoming.src} alt={upcoming.src}
             key={upcoming._id}>
             </img>
     })} </Slider>
