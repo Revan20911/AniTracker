@@ -46,7 +46,7 @@ export default function Series(){
                         <h4>Members: N/A</h4>
                         </div>
                     </div>
-                    <iframe className="ranking-pv" src="https://www.youtube.com/embed/WFVY88Urzuc?enablejsapi=1&wmode=opaque&autoplay=1"></iframe>
+                    <iframe title={info.title} className="ranking-pv" src="https://www.youtube.com/embed/WFVY88Urzuc?enablejsapi=1&wmode=opaque&autoplay=1"></iframe>
                 </div>
                 <div className="description">
                     <h3>Synopsis</h3>
