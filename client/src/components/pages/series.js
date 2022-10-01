@@ -15,14 +15,14 @@ export default function Series(){
         fetchSeriesInfo();
     })
 
-    function getCharacters(){
+   // function getCharacters(){
         return info.castlist.map((character) => {
             return <div className="char">
                 <img src={character.image} alt=""></img>
                 <h3>{character.name}</h3>
             </div>
         })
-    }
+    }//
     return(
         <div className="series-wrapper">
             <h1>{info.title}</h1>
