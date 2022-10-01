@@ -21,7 +21,7 @@ export default function Register(){
         e.preventDefault();
         const newUser = {...user};
 
-        await fetch("http://localhost:5000/register" , {
+        await fetch("https://anime----tracker.herokuapp.com/register" , {
             method: 'POST',
             headers: {
                 "Content-Type" : "application/json",
