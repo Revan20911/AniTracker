@@ -27,7 +27,7 @@ export default function TopUpcoming(){
             to={'/series/' + upcoming._id + "/" + upcoming.title}>
                 <h3>{upcoming.title}</h3>
                 <p>{upcoming.desc}</p>
-                <img src={upcoming.src}/>
+                <img src={upcoming.src}alt=""/>
             </NavLink>
         })
     }
