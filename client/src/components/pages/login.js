@@ -21,7 +21,7 @@ export default function Login(){
         e.preventDefault();
         const newUser = {...user};
 
-        await fetch("http://localhost:5000/login" , {
+        await fetch("https://anime----tracker.herokuapp.com/login" , {
             method: 'POST',
             headers: {
                 "Content-Type" : "application/json",
