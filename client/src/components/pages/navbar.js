@@ -10,11 +10,8 @@ export default function Navbar(){
             </NavLink>
             <div className="navigation-bar">
                 <div className="button-row">
-                    <NavLink className="nav-button" to="/shows/add">
-                        Add Show
-                        </NavLink>
                     <NavLink className="nav-button" to="/anime/series">
-                        All Shows
+                        All Series
                     </NavLink>
                 </div>
                 <div className="button-row">

@@ -29,12 +29,9 @@ export default function SeriesList(){
             </NavLink>
         })
     }
-
     return(
         <div className="contentwrapper">
-            <div className="series-list">
                 {buildList()}
-            </div>
         </div>
     )
 }

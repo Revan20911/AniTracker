@@ -4,19 +4,25 @@ import { useParams } from "react-router-dom";
 
 export default function Series(){
     const {id} = useParams();
-
     const [info, setInfo] = React.useState([]);
 
     React.useEffect(()=>{
         async function fetchSeriesInfo(){
             const response = await fetch(`https://anime----tracker.herokuapp.com/anime/series/${id}`)
             const seriesInfo = await response.json();
-
             setInfo(seriesInfo);
         }
         fetchSeriesInfo();
     })
 
+    function getCharacters(){
+        return info.castlist.map((character) => {
+            return <div className="char">
+                <img src={character.image} alt=""></img>
+                <h3>{character.name}</h3>
+            </div>
+        })
+    }
     return(
         <div className="series-wrapper">
             <h1>{info.title}</h1>
@@ -39,7 +45,6 @@ export default function Series(){
                 <div className="stat-score">
                         </div>
                     <div className="ranking-stats">
-                       
                         <div className="stat-titles">
                         <h4>Ranked: N/A</h4>
                         <h4>Popularity: N/A</h4>
@@ -54,6 +59,16 @@ export default function Series(){
                 </div>
                 <div className="description">
                     <h3>Characters & Voice actors</h3>
+                    <div className="cast-wrapper">
+                        <div className="cast">
+                            <div className="char"></div>
+                            <div className="char"></div>
+                        </div>
+                        <div className="cast">
+                        <div className="char"></div>
+                        <div className="char"></div>
+                        </div>
+                    </div>
                 </div>
                 <div className="description">
                     <h3>Reviews</h3>

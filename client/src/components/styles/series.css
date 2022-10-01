@@ -12,7 +12,7 @@
 .series-wrapper{
     display: block;
     width: 100rem;
-    height: 100rem;
+    height: 100%;
     margin:0 auto;
     background-color: var(--prim-light);
 
@@ -154,6 +154,31 @@ img{
 
     border: none;
 
+}
+
+
+.cast-wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 70rem;
+    min-height: 10rem;
+    border: 1px solid var(--prim-dark);
+
+}
+
+.cast{
+    width:35rem;
+    min-height: 10rem;
+    background-color: white;
+}
+
+.char{
+    
+    display: flex;
+    flex-direction: row;
+    width:inherit;
+    height: 8rem;
+    border: 1px solid var(--prim-dark);
 }
 
 
