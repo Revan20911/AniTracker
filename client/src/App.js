@@ -9,6 +9,8 @@ import "./footer.css";
 import Register from "./components/pages/register";
 import Login from "./components/pages/login";
 import Series from "./components/pages/series";
+import SeriesList from "./components/pages/seriesList";
+
 
 const App = () => {
   return(
