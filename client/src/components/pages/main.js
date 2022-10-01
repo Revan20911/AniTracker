@@ -6,7 +6,7 @@ const Show = (props) => {
     return(
         <div className="show-container">
             <h3>{props.show.title}</h3>
-            <img src={props.show.cover}/>
+            <img src={props.show.cover} alt={props.show.cover}/>
             <h4>{props.show.genre}</h4>
             <p>{props.show.desc}</p>
             <div className="button-row">
