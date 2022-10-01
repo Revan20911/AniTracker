@@ -21,7 +21,7 @@ export default function SeriesList(){
         return series.map((show) => {
             return <NavLink className="navlink" to={"/anime/series/" + show._id + "/" + show.title} key={show._id}>
                 <div className="series-card">
-                <img src={show.img}></img>
+                <img src={show.img} alt=""></img>
                 <div className="series-card-info">
                 <h3>{show.title}</h3>
                 </div>
