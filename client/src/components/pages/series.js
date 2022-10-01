@@ -9,7 +9,7 @@ export default function Series(){
 
     React.useEffect(()=>{
         async function fetchSeriesInfo(){
-            const response = await fetch(`http://localhost:5000/anime/series/${id}`)
+            const response = await fetch(`https://anime----tracker.herokuapp.com/anime/series/${id}`)
             const seriesInfo = await response.json();
 
             setInfo(seriesInfo);
