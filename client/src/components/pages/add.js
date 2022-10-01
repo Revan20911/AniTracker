@@ -29,7 +29,7 @@ export default function AddShow(){
 
         const newShow = {...show};
 
-        await fetch("http://localhost:5000/shows/add", {
+        await fetch("https://anime----tracker.herokuapp.com/shows/add", {
             method: "POST",
             headers: {
                 "Content-Type" : "application/json",
