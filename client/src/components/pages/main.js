@@ -22,7 +22,7 @@ export default function ShowList() {
 
     useEffect(() => {
         async function getShows() {
-            const response = await fetch("http://localhost:5000/shows/");
+            const response = await fetch("https://anime----tracker.herokuapp.com/shows/");
 
             if(!response.ok) {
                 const message = `An error occurred: ${response.statusText}`;
@@ -38,7 +38,7 @@ export default function ShowList() {
     }, [shows.length]);
 
     async function delShow(id) {
-        await fetch(`http://localhost:5000/${id}`, {
+        await fetch(`https://anime----tracker.herokuapp.com/${id}`, {
             method: 'DELETE'
         });
 
