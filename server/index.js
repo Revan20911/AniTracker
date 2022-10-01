@@ -41,6 +41,6 @@ app.use((req, res) => {
   res.send('Welcome to Express');
 });
 
-app.listen(port, '0.0.0.0', () => {
-  console.log(`Server running on port ${port}`);
+app.listen(procees.env.PORT, 'https://anime----tracker.herokuapp.com/', () => {
+  console.log(`Server running on port ${procees.env.PORT}`);
 });
