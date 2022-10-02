@@ -23,7 +23,7 @@ export default function Series(){
         return characters.map((character) => {
             return <div className="char">
                 <h3 className="char_name">{character[0]}</h3>
-                <img src={character[1]}/>
+                <img src={character[1]} alt={character[0]}/>
             </div>
         })
     }
