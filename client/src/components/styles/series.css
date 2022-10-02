@@ -167,7 +167,10 @@ img{
 }
 
 .cast{
-    width:35rem;
+    display:grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-template-rows: repeat(4, minmax(100px, 1fr));
+    width: 70rem;
     min-height: 10rem;
     background-color: white;
 }
@@ -176,8 +179,23 @@ img{
     
     display: flex;
     flex-direction: row;
-    width:inherit;
+    width:35rem;
     height: 8rem;
+    border: 1px solid var(--prim-dark);
+    justify-content: space-between;
+}
+
+.char h3{
+    border: none;
+    padding: 10px 10px;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.char img{
+
+    height: 5rem;
+    width: 4rem;
     border: 1px solid var(--prim-dark);
 }
 

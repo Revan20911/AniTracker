@@ -5,24 +5,28 @@ import { useParams } from "react-router-dom";
 export default function Series(){
     const {id} = useParams();
     const [info, setInfo] = React.useState([]);
+    const [characters, setCharacters] = React.useState([]);
+    
 
     React.useEffect(()=>{
         async function fetchSeriesInfo(){
             const response = await fetch(`https://anime----tracker.herokuapp.com/anime/series/${id}`)
             const seriesInfo = await response.json();
             setInfo(seriesInfo);
+            setCharacters(seriesInfo.characters[0]);
         }
-        fetchSeriesInfo();
+        fetchSeriesInfo();   
     })
 
-    // function getCharacters(){
-    //     return info.castlist.map((character) => {
-    //         return <div className="char">
-    //             <img src={character.image} alt=""></img>
-    //             <h3>{character.name}</h3>
-    //         </div>
-    //     })
-    // }
+    function getCharacters(){
+
+        return characters.map((character) => {
+            return <div className="char">
+                <h3 className="char_name">{character[0]}</h3>
+                <img src={character[1]}/>
+            </div>
+        })
+    }
     return(
         <div className="series-wrapper">
             <h1>{info.title}</h1>
@@ -61,12 +65,7 @@ export default function Series(){
                     <h3>Characters & Voice actors</h3>
                     <div className="cast-wrapper">
                         <div className="cast">
-                            <div className="char"></div>
-                            <div className="char"></div>
-                        </div>
-                        <div className="cast">
-                        <div className="char"></div>
-                        <div className="char"></div>
+                            {getCharacters()}
                         </div>
                     </div>
                 </div>
