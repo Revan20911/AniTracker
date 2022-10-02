@@ -20,19 +20,22 @@ export default function Series(){
 
     function getCharacters(){
 
-        return characters.map((character) => {
-            return <div className="char">
+        return characters.map((character, index) => {
+            while(index < 10){
+                return <div className="char">
                 <h3 className="char_name">{character[0]}</h3>
                 <img src={character[1]} alt={character[0]}/>
             </div>
+            }
         })
     }
     return(
         <div className="series-wrapper">
-            <h1>{info.title}</h1>
+            <div className="series-title"><h1>{info.title}</h1></div>
             <div className="series-sub-content-wrapper">
                 <div className="series-sub-content">
                     <img src={info.img} alt="Series_cover"/>
+                    <button className="watch">Watch Episodes</button>
                     <h4>Information</h4>
                     <div className="series-information">
                         <div className="item-info">Episodes:  

@@ -15,13 +15,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
-    padding: 0.25rem;
-    height: 5rem;
+    width: 100rem;
+    height: 3rem;
     align-items: center;
     background-color: var(--prim-dark);
     color: var(--prim-light);
-    box-shadow: 2px 2px 2px black;
+    margin: 0 auto;
+    
+
     
 }
 
@@ -32,36 +33,35 @@
     justify-content: center;
     align-items: center;
     width: fit-content;
+    
 }
 
 .nav-button{
 
     width: fit-content;
+    height: auto;
     padding: 10px 20px;
     color: var(--prim-light);
     text-decoration: none;
     font-size: 1.5rem;
-    border: 1px solid var(--prim-light);
+    font-weight: 600;
     
-    margin: 10px;
+    margin: 0 auto;
 }
 
 .nav-button:hover{
     background-color: var(--prim-light);
-    border: 1px solid var(--prim-dark);
     color: var(--prim-dark);
 }
 
 .nav-button-login{
 
     width: fit-content;
-    padding: 10px 20px;
+    padding: 0.5rem;
+    height: auto;
     color: var(--prim-dark);
     text-decoration: none;
     font-size: 1.5rem;
-    border: 1px solid var(--prim-dark);
-    
-    margin: 10px;
     background-color: var(--prim-light);
 
 }
@@ -71,9 +71,7 @@
     color: var(--prim-light);
     text-decoration: none;
     font-size: 1.5rem;
-    border: 1px solid var(--prim-light);
     background-color: var(--prim-dark);
-
 }
 
 
@@ -81,19 +79,26 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    z-index: 1;
+    width: 100rem;
     background-color: white;
-    padding: 10px 10px;
     text-decoration: none;
+    margin: 0 auto;
+    text-align: left;
+      
      
 }
 
+.logo-title{
+    padding: 10px 20px;  
+
+}
+
 .logo h1, .logo p{
-    padding: 0px;
-    margin: 0px;
+
     color: var(--prim-dark);
     cursor: pointer;
     width:fit-content;
+    margin: 0;
     
 }
 

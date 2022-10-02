@@ -11,9 +11,10 @@
 }
 
 .footer{
-    position: absolute;
-    width: 100%;
+    
+    width: 100rem;
     height: 50px;
     background-color: var(--prim-dark);
+    margin: 0 auto;
 
 }

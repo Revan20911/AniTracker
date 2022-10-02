@@ -8,7 +8,7 @@ function ShowTrailers(){
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 3.25,
         slidesToScroll: 1
     };
 
@@ -50,7 +50,7 @@ function ShowUpcoming(){
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 5,
+        slidesToShow: 4.25,
         slidesToScroll: 1
     };
 
