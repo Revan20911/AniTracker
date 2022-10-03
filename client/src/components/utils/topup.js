@@ -21,7 +21,7 @@ export default function TopUpcoming(){
 
     function DisplayTopUpcoming(){
         return topUpcoming.map((upcoming, index) => {
-            while(index + 1 <= 5){
+            while(index + 1 <= 5)
                 return <NavLink
             key={upcoming._id}
             className="upcoming-cell"
@@ -31,7 +31,6 @@ export default function TopUpcoming(){
                 <img src={upcoming.src}alt=""/>
                 <h1 className="rank">{index + 1}</h1>
             </NavLink>
-            }
         })
     }
     return(
