@@ -21,7 +21,6 @@ export default function TopUpcoming(){
 
     function DisplayTopUpcoming(){
         return topUpcoming.map((upcoming, index) => {
-            while(index + 1 <= 5)
                 return <NavLink
             key={upcoming._id}
             className="upcoming-cell"
