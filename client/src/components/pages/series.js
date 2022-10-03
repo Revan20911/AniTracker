@@ -21,12 +21,12 @@ export default function Series(){
     function getCharacters(){
 
         return characters.map((character, index) => {
-            while(index < 10){
+            
                 return <div className="char">
                 <h3 className="char_name">{character[0]}</h3>
                 <img src={character[1]} alt={character[0]}/>
             </div>
-            }
+            
         })
     }
     return(
