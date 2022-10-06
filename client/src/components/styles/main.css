@@ -1,0 +1,141 @@
+*,
+*before,
+*after{
+    box-sizing: border-box;   
+}
+
+:root{
+
+    --prim-dark:#0a47a8;
+    --prim-light:#e1e3e6;
+}
+body{
+    background-image: url("https://wallpaperaccess.com/full/6173053.jpg");
+}
+
+.content-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100rem;
+    margin:0 auto;
+    background-color: var(--prim-light);
+    margin-top: 10px;
+}
+
+.show-list{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(400px, 500px));
+    grid-template-rows: repeat(1, minmax(50px, 600px));
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.show-container{
+
+    opacity: 0;
+    height: 500px;
+    width: 300px;
+    padding: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid var(--prim-dark);
+    margin: 10px;
+    transition: all 0.3s;
+    animation: fade-in 0.3s 0.3s ease-in-out forwards;
+    box-shadow: 2px 2px 1px black ;
+    border-radius: 0.25rem;
+    background-color: white;
+    
+}
+
+.show-container p{
+    
+    width:200px;
+    background-color: var(--prim-light);
+    overflow: scroll;
+    border-radius: 0.25rem;
+    min-height: 5vh;
+}
+
+.show-container img{
+    
+    max-height: 15rem;
+    max-width: 100%;
+    min-width: 215px;
+    min-height: 250px;
+    border-radius: 0.25rem;
+    
+}
+.show-container h3{
+    
+    text-align: center;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--prim-dark);
+    padding: 0px 5px;
+    overflow: scroll;
+}
+
+.show-container h4{
+    font-style: italic;
+    font-weight: 400;
+    border: 1px solid var(--prim-dark);
+    padding: 5px 10px;
+    border-radius: 0.25rem;
+    margin-bottom: 5px;
+    
+}
+
+.show-container:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.delete{
+
+    background-color: red;
+    width: 75px;
+    height: fit-content;
+    border: 1px solid transparent;
+    padding: 10px 10px;
+    border-radius: 0.25rem;
+    margin: 5px;
+    color: white;
+}
+
+.edit{
+
+    background-color: blue;
+    width: 75px;
+    height: fit-content;
+    border: 1px solid transparent;
+    padding: 10px 10px;
+    border-radius: 0.25rem;
+    margin: 5px;
+    color: white;
+}
+
+.edit:hover{
+
+    background-color: #99b2ff;
+    cursor: pointer;
+}
+
+.delete:hover{
+
+    background-color: #99b2ff;
+    cursor: pointer;
+}
+
+@keyframes fade-in{
+
+    from{opacity: 0;} 
+    to {opacity: 1;}
+}
+
+
+
+

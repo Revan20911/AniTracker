@@ -1,0 +1,20 @@
+*,
+*before,
+*after{
+    box-sizing: border-box;   
+}
+
+:root{
+
+    --prim-dark:#0a47a8;
+    --prim-light:#e1e3e6;
+}
+
+.footer{
+    
+    width: 100rem;
+    height: 50px;
+    background-color: var(--prim-dark);
+    margin: 0 auto;
+
+}
